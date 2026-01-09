@@ -1,29 +1,35 @@
-import React from 'react'
+import React from "react";
 
 export default function Navbar() {
-    const nav = ["Home", "Deals", "Cart","Contact","Login"];
-    return (
-        <>
-        
-       
-            <div className='flex gap-50 mt-10 text-2xl '>
-            <img src="public/DLogo.jpeg" alt="" className='w-12'/>
-                {
-                    nav.map((data, index) => {
-                        return (
-                            <div >
-                                <li key={index} className='text-white list-none' >
-                                    {data}
-                                </li>
+  const nav = ["Home", "Deals", "Cart", "Contact", "Login"];
 
-                            </div>
-                        )
-
-                    })
-                }
-            </div>
-            
-            </>
+  return (
+    <nav className="fixed top-0 left-0 w-full z-50 bg-[#2C5364]">
+      <div className="flex items-center justify-between px-10 py-4 ">
         
-    )
+        {/* Logo */}
+        <img src="DLogo.jpeg" alt="Logo" className="w-10 cursor-pointer"/>
+
+        {/* Menu */}
+        <ul className="flex items-center gap-8 text-xl">
+          {nav.map((item, index) =>
+            item === "Login" ? (
+              <li key={index}>
+                <button className="bg-black text-white px-5 py-2 rounded-md text-lg hover:bg-gray-800 transition">
+                  Login
+                </button>
+              </li>
+            ) : (
+              <li
+                key={index}
+                className="text-white cursor-pointer hover:text-gray-300 transition"
+              >
+                {item}
+              </li>
+            )
+          )}
+        </ul>
+      </div>
+    </nav>
+  );
 }
