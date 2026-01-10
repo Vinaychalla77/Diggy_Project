@@ -5,13 +5,13 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-[#2C5364]">
-      <div className="flex items-center justify-between px-10 py-4 ">
+      <div className="flex items-center px-10 py-10 ">
         
         {/* Logo */}
         <img src="DLogo.jpeg" alt="Logo" className="w-10 cursor-pointer"/>
 
         {/* Menu */}
-        <ul className="flex items-center gap-8 text-xl">
+        <ul className="flex items-center gap-45 text-xl pl-40">
           {nav.map((item, index) =>
             item === "Login" ? (
               <li key={index}>
