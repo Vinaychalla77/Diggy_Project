@@ -1,4 +1,4 @@
-import React from "react";
+
 
 export default function Navbar() {
   const nav = ["Home", "Deals", "Cart", "Contact", "Login"];
@@ -8,7 +8,7 @@ export default function Navbar() {
       <div className="flex items-center justify-between px-10 py-4 ">
         
         {/* Logo */}
-        <img src="DLogo.jpeg" alt="Logo" className="w-10 cursor-pointer"/>
+        <img src="DLogo.jpeg" alt="Logo" className="w-10 cursor-pointer" style={{borderRadius: '50px', height:'60px', width:'60px'}}/>
 
         {/* Menu */}
         <ul className="flex items-center gap-8 text-xl">
